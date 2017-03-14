@@ -1,0 +1,44 @@
+   1               		.file	"main.c"
+   2               	__SREG__ = 0x3f
+   3               	__SP_H__ = 0x3e
+   4               	__SP_L__ = 0x3d
+   5               	__CCP__  = 0x34
+   6               	__tmp_reg__ = 0
+   7               	__zero_reg__ = 1
+  15               	.Ltext0:
+  16               	.global	main
+  18               	main:
+  19               	.LFB6:
+  20               	.LM1:
+  21               	/* prologue: function */
+  22               	/* frame size = 0 */
+  23               	.LM2:
+  24 0000 82E0      		ldi r24,lo8(2)
+  25 0002 87BB      		out 55-32,r24
+  26               	.L7:
+  27               	.LM3:
+  28 0004 B09B      		sbis 54-32,0
+  29 0006 00C0      		rjmp .L2
+  30               	.LM4:
+  31 0008 88BB      		out 56-32,r24
+  32 000a 00C0      		rjmp .L7
+  33               	.L2:
+  34               	.LM5:
+  35 000c B099      		sbic 54-32,0
+  36 000e 00C0      		rjmp .L7
+  37               	.LM6:
+  38 0010 18BA      		out 56-32,__zero_reg__
+  39 0012 00C0      		rjmp .L7
+  40               	.LFE6:
+  66               	.Letext0:
+DEFINED SYMBOLS
+                            *ABS*:00000000 main.c
+C:\Users\Arthur\AppData\Local\Temp/ccsNhTDM.s:2      *ABS*:0000003f __SREG__
+C:\Users\Arthur\AppData\Local\Temp/ccsNhTDM.s:3      *ABS*:0000003e __SP_H__
+C:\Users\Arthur\AppData\Local\Temp/ccsNhTDM.s:4      *ABS*:0000003d __SP_L__
+C:\Users\Arthur\AppData\Local\Temp/ccsNhTDM.s:5      *ABS*:00000034 __CCP__
+C:\Users\Arthur\AppData\Local\Temp/ccsNhTDM.s:6      *ABS*:00000000 __tmp_reg__
+C:\Users\Arthur\AppData\Local\Temp/ccsNhTDM.s:7      *ABS*:00000001 __zero_reg__
+C:\Users\Arthur\AppData\Local\Temp/ccsNhTDM.s:18     .text:00000000 main
+
+NO UNDEFINED SYMBOLS
