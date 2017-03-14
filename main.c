@@ -12,19 +12,14 @@ int main (void)
   {
     //check if PB0 is high, if so, buzzer rings
     if ((PINB & 1) == 1)
-	{
-	  PORTB = 0b00000010;
-	}
-	//else if low, buzzer stops
-	else if ((PINB & 1) == 0)
-	{
-	  PORTB = 0b00000000;
-	}
-	//_delay_ms(100);
-	//PORTB = 0b00000000;
-	//_delay_ms(100);
+	  {
+	    PORTB = 0b00000010;
+	  }
+	  //else if low, buzzer stops
+	  else if ((PINB & 1) == 0)
+	  {
+	    PORTB = 0b00000000;
+	  }
   }
-  
   return 1;
-  
 }
